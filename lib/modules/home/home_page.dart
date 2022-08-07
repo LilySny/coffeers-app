@@ -1,10 +1,10 @@
 import 'dart:developer';
-
+import 'package:coffers_app/modules/recipes/view/widgets/recipe_list_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
 class HomePage extends StatefulWidget {
-  HomePage({Key? key}) : super(key: key);
+  const HomePage({Key? key}) : super(key: key);
 
   @override
   State<HomePage> createState() => _HomePageState();
@@ -18,8 +18,8 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
-        mainAxisAlignment: MainAxisAlignment.center,
         children: [
+          const RecipeListWidget(),
           Center(
             child: ElevatedButton(
                 onPressed: () {

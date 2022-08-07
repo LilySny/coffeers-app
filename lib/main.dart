@@ -1,4 +1,4 @@
-import 'package:coffers_app/home_page.dart';
+import 'package:coffers_app/modules/home/home_page.dart';
 import 'package:flutter/material.dart';
 
 void main() {

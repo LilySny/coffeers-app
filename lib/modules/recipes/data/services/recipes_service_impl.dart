@@ -1,5 +1,5 @@
-import 'package:coffers_app/recipes/data/models/recipe.dart';
-import 'package:coffers_app/recipes/data/services/recipes_service.dart';
+import 'package:coffers_app/modules/recipes/data/models/recipe.dart';
+import 'package:coffers_app/modules/recipes/data/services/recipes_service.dart';
 import 'package:coffers_app/shared/constants.dart';
 import 'package:dio/dio.dart';
 
