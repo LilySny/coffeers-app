@@ -25,7 +25,7 @@ class _HomePageState extends State<HomePage> {
                 onPressed: () {
                   accessLocation();
                 },
-                child: Text("Abrir Mapa")),
+                child: const Text("Abrir Mapa")),
           )
         ],
       ),
