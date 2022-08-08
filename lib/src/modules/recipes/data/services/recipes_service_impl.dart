@@ -11,10 +11,10 @@ class RecipesServiceImpl implements RecipesService {
   @override
   Future<List<Recipe>>? findAll() async {
     try {
-      final response = await _dio.get('$baseUrl/items');
+      final response = await _dio.get('$baseUrl/b/62f07044e13e6063dc705b2b');
 
       return List<Recipe>.from(
-         response.data.map((x) => Recipe.fromJson(x))).toList();
+         response.data["record"]["items"].map((x) => Recipe.fromJson(x))).toList();
     } on DioError catch (_) {
       throw DioError(
         requestOptions: RequestOptions(path: '$baseUrl/items'),

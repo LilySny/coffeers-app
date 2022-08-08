@@ -3,6 +3,7 @@ import 'package:coffers_app/src/modules/recipes/data/models/recipe.dart';
 import 'package:coffers_app/src/modules/recipes/view/controllers/recipes_cubit.dart';
 import 'package:coffers_app/src/modules/recipes/view/controllers/recipes_state.dart';
 import 'package:coffers_app/src/modules/recipes/view/widgets/recipe_item_widget.dart';
+import 'package:coffers_app/src/shared/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -29,7 +30,7 @@ class _RecipeListWidgetState extends State<RecipeListWidget> {
       builder: (context, state) {
         if (state is LoadingState) {
           return const Center(
-            child: CircularProgressIndicator(),
+            child: CircularProgressIndicator(valueColor: AlwaysStoppedAnimation<Color>(lightBrown)),
           );
         } else if (state is ErrorState) {
           return const Center(
