@@ -1,9 +1,10 @@
+import 'package:coffers_app/core/dependencies.dart';
 import 'package:coffers_app/modules/recipes/data/models/recipe.dart';
 import 'package:coffers_app/modules/recipes/view/controllers/recipes_cubit.dart';
 import 'package:coffers_app/modules/recipes/view/controllers/recipes_state.dart';
+import 'package:coffers_app/modules/recipes/view/widgets/recipe_item_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:get_it/get_it.dart';
 
 class RecipeListWidget extends StatefulWidget {
   const RecipeListWidget({Key? key}) : super(key: key);
@@ -17,7 +18,7 @@ class _RecipeListWidgetState extends State<RecipeListWidget> {
 
   @override
   void initState() {
-    _recipesCubit = GetIt.instance<RecipesCubit>();
+    _recipesCubit = getIt<RecipesCubit>();
     super.initState();
   }
 
@@ -45,17 +46,19 @@ class _RecipeListWidgetState extends State<RecipeListWidget> {
 
   Widget itemsGrid(List<Recipe>? items) {
     return GridView.builder(
-      padding: const EdgeInsets.symmetric(vertical: 27),
+      padding: const EdgeInsets.symmetric(vertical: 27, horizontal: 7.0),
       shrinkWrap: true,
       gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-        childAspectRatio: 2 / 2.5,
+        childAspectRatio: 1.9 / 2,
         crossAxisCount: 2,
         mainAxisSpacing: 15,
-        crossAxisSpacing: 10,
+        crossAxisSpacing: 7,
       ),
       itemCount: items?.length,
       itemBuilder: (BuildContext context, int index) {
-        return Container(child: Text("Carregado"),);
+        return RecipeItemWidget(
+          item: items![index],
+        );
       },
     );
   }

@@ -4,9 +4,11 @@ import 'package:coffers_app/modules/recipes/view/controllers/recipes_cubit.dart'
 import 'package:dio/dio.dart';
 import 'package:get_it/get_it.dart';
 
-void setup() {
-  GetIt.I.registerSingleton<RecipesService>(RecipesServiceImpl(Dio()));
-  
-  GetIt.I.registerSingleton<RecipesCubit>(
-      RecipesCubit(service: GetIt.I<RecipesService>()));
+GetIt getIt = GetIt.instance;
+
+void setupLocator() {
+  getIt.registerLazySingleton<RecipesService>(() => RecipesServiceImpl(Dio()));
+
+  getIt.registerLazySingleton<RecipesCubit>(
+      () => RecipesCubit(service: GetIt.I<RecipesService>()));
 }

@@ -14,7 +14,7 @@ class RecipesServiceImpl implements RecipesService {
       final response = await _dio.get('$baseUrl/items');
 
       return List<Recipe>.from(
-          response.data["items"].map((x) => Recipe.fromJson(x))).toList();
+         response.data.map((x) => Recipe.fromJson(x))).toList();
     } on DioError catch (_) {
       throw DioError(
         requestOptions: RequestOptions(path: '$baseUrl/items'),
