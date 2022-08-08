@@ -1,4 +1,5 @@
 import 'dart:developer';
+import 'package:coffers_app/src/modules/home/view/widgets/home_custom_button_widget.dart';
 import 'package:coffers_app/src/modules/recipes/view/pages/recipes_page.dart';
 import 'package:coffers_app/src/shared/colors.dart';
 import 'package:flutter/material.dart';
@@ -59,30 +60,15 @@ class _HomePageState extends State<HomePage> {
         const SizedBox(
           height: 10,
         ),
-        _customButton(
-            "Receitas",
-            () => Navigator.of(context).push(
+        HomeCustomButtonWidget(
+            title: "Receitas",
+            onPressed: () => Navigator.of(context).push(
                 MaterialPageRoute(builder: (context) => const RecipesPage()))),
         const SizedBox(
           height: 15,
         ),
-        _customButton("Cafeterias", accessLocation),
+        HomeCustomButtonWidget(title: "Cafeterias", onPressed: accessLocation),
       ],
-    );
-  }
-
-  Widget _customButton(String title, Function()? onPressed) {
-    return SizedBox(
-      width: MediaQuery.of(context).size.width / 1.5,
-      child: ElevatedButton(
-        onPressed: onPressed,
-        style: ElevatedButton.styleFrom(
-            primary: primaryDarkBrown,
-            padding: const EdgeInsets.symmetric(vertical: 16),
-            textStyle:
-                const TextStyle(fontSize: 20, fontWeight: FontWeight.w500)),
-        child: Text(title),
-      ),
     );
   }
 
@@ -97,3 +83,4 @@ class _HomePageState extends State<HomePage> {
     }
   }
 }
+

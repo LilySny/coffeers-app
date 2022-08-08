@@ -1,4 +1,5 @@
 import 'package:coffers_app/src/modules/recipes/data/models/recipe.dart';
+import 'package:coffers_app/src/modules/recipes/view/widgets/recipe_step_items_widget.dart';
 import 'package:coffers_app/src/shared/colors.dart';
 import 'package:flutter/material.dart';
 
@@ -36,53 +37,21 @@ class RecipeItemPage extends StatelessWidget {
 
   Widget _pageContent() {
     return Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text(
-                  item.title,
-                  textAlign: TextAlign.center,
-                  style: const TextStyle(color: lightBrown, fontSize: 26.0),
-                ),
-                const SizedBox(
-                  height: 50.0,
-                ),
-                _listItems("Ingredientes", item.ingredients),
-                const SizedBox(
-                  height: 30.0,
-                ),
-                _listItems("Modo de preparo", item.steps),
-              ],
-            );
-  }
-
-  Widget _listItems(String label, List<String> list) {
-    return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Text(
-          label,
+          item.title,
           textAlign: TextAlign.center,
-          style: const TextStyle(
-            color: lightBrown,
-            fontSize: 20.0,
-            fontWeight: FontWeight.bold,
-          ),
+          style: const TextStyle(color: lightBrown, fontSize: 26.0),
         ),
         const SizedBox(
-          height: 10.0,
+          height: 50.0,
         ),
-        Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: list
-              .map((e) => Text(
-                    "• $e\n",
-                    style: const TextStyle(
-                      color: secondaryLightBrown,
-                      fontSize: 18.0,
-                    ),
-                  ))
-              .toList(),
+        RecipeStepItemsWidget(label: "Ingredientes", list: item.ingredients),
+        const SizedBox(
+          height: 30.0,
         ),
+        RecipeStepItemsWidget(label: "Modo de preparo", list: item.steps),
       ],
     );
   }
