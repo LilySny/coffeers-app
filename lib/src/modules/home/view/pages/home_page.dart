@@ -1,6 +1,6 @@
 import 'dart:developer';
-import 'package:coffers_app/modules/recipes/view/pages/recipes_page.dart';
-import 'package:coffers_app/shared/colors.dart';
+import 'package:coffers_app/src/modules/recipes/view/pages/recipes_page.dart';
+import 'package:coffers_app/src/shared/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 

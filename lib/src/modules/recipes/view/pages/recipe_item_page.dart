@@ -1,5 +1,5 @@
-import 'package:coffers_app/modules/recipes/data/models/recipe.dart';
-import 'package:coffers_app/shared/colors.dart';
+import 'package:coffers_app/src/modules/recipes/data/models/recipe.dart';
+import 'package:coffers_app/src/shared/colors.dart';
 import 'package:flutter/material.dart';
 
 class RecipeItemPage extends StatelessWidget {

@@ -1,8 +1,8 @@
-import 'package:coffers_app/core/dependencies.dart';
-import 'package:coffers_app/modules/recipes/data/models/recipe.dart';
-import 'package:coffers_app/modules/recipes/view/controllers/recipes_cubit.dart';
-import 'package:coffers_app/modules/recipes/view/controllers/recipes_state.dart';
-import 'package:coffers_app/modules/recipes/view/widgets/recipe_item_widget.dart';
+import 'package:coffers_app/src/core/dependencies.dart';
+import 'package:coffers_app/src/modules/recipes/data/models/recipe.dart';
+import 'package:coffers_app/src/modules/recipes/view/controllers/recipes_cubit.dart';
+import 'package:coffers_app/src/modules/recipes/view/controllers/recipes_state.dart';
+import 'package:coffers_app/src/modules/recipes/view/widgets/recipe_item_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 

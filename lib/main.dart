@@ -1,6 +1,6 @@
-import 'package:coffers_app/core/dependencies.dart';
-import 'package:coffers_app/modules/home/view/pages/home_page.dart';
-import 'package:coffers_app/shared/colors.dart';
+import 'package:coffers_app/src/core/dependencies.dart';
+import 'package:coffers_app/src/modules/home/view/pages/home_page.dart';
+import 'package:coffers_app/src/shared/colors.dart';
 import 'package:flutter/material.dart';
 
 void main() {

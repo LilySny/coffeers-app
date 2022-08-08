@@ -1,4 +1,4 @@
-import 'package:coffers_app/modules/recipes/data/models/recipe.dart';
+import 'package:coffers_app/src/modules/recipes/data/models/recipe.dart';
 import 'package:equatable/equatable.dart';
 
 abstract class RecipesState extends Equatable {}

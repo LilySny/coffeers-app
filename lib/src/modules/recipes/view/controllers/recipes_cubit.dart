@@ -1,5 +1,5 @@
-import 'package:coffers_app/modules/recipes/data/services/recipes_service.dart';
-import 'package:coffers_app/modules/recipes/view/controllers/recipes_state.dart';
+import 'package:coffers_app/src/modules/recipes/data/services/recipes_service.dart';
+import 'package:coffers_app/src/modules/recipes/view/controllers/recipes_state.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 class RecipesCubit extends Cubit<RecipesState> {
