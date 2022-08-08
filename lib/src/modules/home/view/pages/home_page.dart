@@ -4,6 +4,7 @@ import 'package:coffers_app/src/modules/recipes/view/pages/recipes_page.dart';
 import 'package:coffers_app/src/shared/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -57,8 +58,8 @@ class _HomePageState extends State<HomePage> {
             ),
           ),
         ),
-        const SizedBox(
-          height: 10,
+        SizedBox(
+          height: 30.sp,
         ),
         HomeCustomButtonWidget(
             title: "Receitas",
@@ -68,6 +69,9 @@ class _HomePageState extends State<HomePage> {
           height: 15,
         ),
         HomeCustomButtonWidget(title: "Cafeterias", onPressed: accessLocation),
+        SizedBox(
+          height: 60.sp,
+        ),
       ],
     );
   }
@@ -83,4 +87,3 @@ class _HomePageState extends State<HomePage> {
     }
   }
 }
-

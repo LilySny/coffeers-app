@@ -24,7 +24,7 @@ class MainActivity: FlutterActivity() {
             call, result ->
             if (call.method == "coffees-location"){
                 statusCheck()
-                result.success("Teste5")
+                result.success("Acessando localização")
 
             } else result.notImplemented()
 

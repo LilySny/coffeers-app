@@ -2,6 +2,7 @@ import 'package:coffers_app/src/modules/recipes/data/models/recipe.dart';
 import 'package:coffers_app/src/modules/recipes/view/pages/recipe_item_page.dart';
 import 'package:coffers_app/src/shared/colors.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class RecipeItemWidget extends StatelessWidget {
   const RecipeItemWidget({
@@ -25,7 +26,11 @@ class RecipeItemWidget extends StatelessWidget {
           borderRadius: BorderRadius.circular(20),
         ),
         child: Column(
-          children: [_imageBackground(), const Spacer(), _titleRow(mediaQuery)],
+          children: [
+            _imageBackground(mediaQuery),
+            const Spacer(),
+            _titleRow(mediaQuery),
+          ],
         ),
       ),
     );
@@ -41,26 +46,28 @@ class RecipeItemWidget extends StatelessWidget {
             child: Text(
               item.title,
               overflow: TextOverflow.ellipsis,
-              style: const TextStyle(
+              style: TextStyle(
                   color: primaryBrown,
                   fontWeight: FontWeight.w500,
-                  fontSize: 16.0),
+                  fontSize: 16.0.sp),
             ),
           ),
           const Spacer(),
-          const Icon(
-            Icons.arrow_forward_ios_rounded,
-            size: 20.0,
-            color: primaryBrown,
+          Expanded(
+            child: Icon(
+              Icons.arrow_forward_ios_rounded,
+              size: 15.sp,
+              color: primaryBrown,
+            ),
           )
         ],
       ),
     );
   }
 
-  Widget _imageBackground() {
+  Widget _imageBackground(Size mediaQuery) {
     return Container(
-      height: 150.0,
+      height: mediaQuery.height / 5,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(18.0),
         image: DecorationImage(

@@ -50,7 +50,7 @@ class _RecipeListWidgetState extends State<RecipeListWidget> {
       padding: const EdgeInsets.symmetric(vertical: 27, horizontal: 7.0),
       shrinkWrap: true,
       gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-        childAspectRatio: 1.9 / 2,
+        childAspectRatio: 1.8 / 2,
         crossAxisCount: 2,
         mainAxisSpacing: 15,
         crossAxisSpacing: 7,
